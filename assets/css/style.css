@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, sans-serif;
+}
+@font-face {
+  font-family: "Blood";
+  src: url("../fonts/BLOODY.TTF") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  position: relative;
+}
+#fundo img {
+  position: fixed;
+  opacity: 0.7;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+}
+header,
+footer {
+  background-color: black;
+  padding: 10px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+header a {
+  color: rgb(230, 223, 223);
+  text-decoration: none;
+  transition: 0.25s;
+  font-family: "Blood";
+}
+header a:hover {
+  color: rgb(161, 8, 8);
+}
+.titulo {
+  color: rgb(161, 8, 8);
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "Blood";
+}
+.navegacao {
+  display: flex;
+  gap: 35px;
+}
+.navegacao li {
+  color: rgb(161, 8, 8);
+  list-style: none;
+}
+.conteudo {
+  margin: 10px 40px;
+  padding-top: 80px;
+}
+
+.redes {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 10px;
+}
+.redes svg {
+  width: 24px;
+  height: 24px;
+  color: black;
+}
+.redes #mdi-linkedin {
+  width: 30px;
+  height: 30px;
+}
+.redes svg:hover {
+  color: rgb(144, 140, 140);
+}
+.titulo-pagina {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.titulo-pagina h1 {
+  margin: 25px 0 20px;
+  font-size: 24px;
+  font-family: "Blood";
+}
+.titulo-pagina h4 {
+  font-family: "Blood";
+  letter-spacing: 2px;
+}
+.titulo-secao {
+  border-bottom: 1px solid rgb(24, 23, 23);
+  padding: 16px 0 10px;
+  font-family: "Blood";
+  letter-spacing: 2px;
+}
+.container-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 0 100px;
+}
+.card {
+  border: 1px solid #333;
+  border-radius: 8px;
+  width: 200px;
+  margin: 20px 0;
+  box-shadow: 0 0 2em rgb(124, 32, 32);
+  transition: transform 0.25s linear;
+  background-color: #fff;
+}
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.card p {
+  padding: 10px;
+  text-align: center;
+  font-family: "Blood";
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+.card .container-botao {
+  display: flex;
+  justify-content: flex-end;
+}
+.card a {
+  background-color: black;
+  color: rgb(161, 8, 8);
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin: 6px;
+  font-family: "Blood";
+  letter-spacing: 2px;
+}
+
+.container-news .formulario .botao:hover {
+  box-shadow: 0px 0px 5px black;
+  transform: translate(0, -2px);
+}
+.container-sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.container-sobre img {
+  width: 200px;
+  border-radius: 50%;
+  height: 200px;
+}
+.container-sobre p {
+  font-weight: 700;
+  margin-top: 20px;
+}
+.container-news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 700px;
+  margin: 20px auto;
+}
+.container-news .formulario {
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.container-news .formulario input:not(input[type="checkbox"]) {
+  border: 1px solid #333;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  width: 100%;
+  padding: 10px;
+}
+.container-news .formulario .check {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.container-news .formulario .check input {
+  margin-right: 10px;
+}
+.container-news .formulario .botao {
+  background-color: black;
+  color: rgb(161, 8, 8);
+  margin: 0 auto;
+  font-weight: 700;
+  width: 90%;
+  padding: 10px;
+  cursor: pointer;
+  font-family: "Blood";
+  letter-spacing: 2px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+.container-news .formulario .botao:hover {
+  filter: brightness(0.9);
+}
+footer {
+  color: rgb(161, 8, 8);
+  margin-top: 50px;
+}
+
+footer p:first-child {
+  margin-bottom: 4px;
+}
+
+footer p:last-child {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+footer .redes svg {
+  color: #fff;
+}
+
+footer .redes svg:hover {
+  color: rgb(144, 140, 140);
+}
+@media screen and (min-width: 500px) {
+  .container-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #fundo {
+    background-image: url("https://st4.depositphotos.com/37205086/40204/i/450/depositphotos_402046242-stock-photo-dark-shadow-hands-body-opaque.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  #fundo img {
+    display: none;
+  }
+  header,
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .titulo {
+    font-size: 28px;
+    margin-bottom: 0;
+  }
+  .titulo-pagina h1 {
+    font-size: 28px;
+  }
+  .conteudo {
+    padding-top: 60px;
+  }
+  .container-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card {
+    margin: 30px 0;
+  }
+  .container-sobre {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 0;
+  }
+  .container-sobre p {
+    margin-left: 100px;
+    margin-top: 0;
+  }
+  .container-news .formulario {
+    padding: 50px 50px 30px;
+  }
+  footer {
+    align-items: flex-end;
+  }
+
+  footer p:last-child {
+    margin-bottom: 0;
+  }
+}
